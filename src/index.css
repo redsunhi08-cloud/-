@@ -1,0 +1,52 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Noto Serif KR", serif;
+
+  /* User Specified Base Colors - Darkened for better visibility */
+  --color-surface: #f6f1eb; 
+  --color-surface-container-low: #e8d8c3; 
+  --color-surface-container-high: #dfccb5; 
+  
+  --color-on-surface: #1a1a1a; 
+  --color-on-surface-variant: #4a4a4a; 
+  --color-outline: #a67c52;
+  
+  --color-primary: #8e734d; 
+  --color-primary-container: #755f3f; 
+  --color-secondary: #a67c52; 
+  --color-accent: #a67c52; 
+  
+  --shadow-lumiere: 0 10px 40px -10px rgba(45, 36, 33, 0.15);
+  --shadow-glass: 0 8px 32px 0 rgba(175, 144, 103, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased tracking-[-0.01em] leading-relaxed;
+  }
+}
+
+.marble-texture {
+  background-image: radial-gradient(circle at 2px 2px, rgba(175, 144, 103, 0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.85); /* Slightly less transparent */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.heading-display {
+  @apply font-serif text-5xl md:text-7xl font-medium tracking-tighter leading-[1.1] text-on-surface;
+}
+
+.heading-section {
+  @apply font-serif text-3xl md:text-5xl font-medium leading-tight tracking-tight text-on-surface;
+}
+

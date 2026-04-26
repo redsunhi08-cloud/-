@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Global helpers
+    function isSignedIn() { return request.auth != null; }
+    function isVerified() { return isSignedIn() && request.auth.token.email_verified == true; }
+    function isAdmin() { 
+      return isVerified() && (
+        request.auth.token.email == 'redsunhi08@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // Validation Blueprints
+    function isValidReservation(data) {
+      return data.keys().hasAll(['name', 'phone', 'date', 'program', 'message', 'status', 'createdAt']) &&
+             data.keys().size() == 7 &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.phone is string && data.phone.size() > 0 && data.phone.size() <= 20 &&
+             data.date is string &&
+             data.program is string &&
+             data.message is string && data.message.size() <= 1000 &&
+             data.status in ['pending', 'confirmed', 'cancelled'] &&
+             data.createdAt == request.time;
+    }
+
+    function isValidReview(data) {
+      return data.keys().hasAll(['rating', 'program', 'content', 'createdAt']) &&
+             data.keys().size() == 4 &&
+             data.rating is number && data.rating >= 1 && data.rating <= 5 &&
+             data.program is string &&
+             data.content is string && data.content.size() > 0 && data.content.size() <= 2000 &&
+             data.createdAt == request.time;
+    }
+
+    // Collection Rules
+    match /reservations/{reservationId} {
+      allow create: if isValidReservation(incoming());
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /reviews/{reviewId} {
+      allow create: if isValidReview(incoming());
+      allow read: if true; // Everyone can see reviews
+      allow update, delete: if isAdmin();
+    }
+
+    match /admins/{adminId} {
+      allow read: if isSignedIn();
+      allow write: if false; // Only manageable via console or specialized logic
+    }
+  }
+}
