@@ -10,9 +10,9 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <motion.img 
-            src="https://postfiles.pstatic.net/MjAyNjA0MjRfNjEg/MDAxNzc2OTkzNjUyMzg0.5fT4SO1hQzP8xd9gnxDGyGoK6_I2IwCPQEgAx-nGt4wg.2jtrcOS4wQy5Wp-SHf_t7GyHz8F3ZTMPO88_ai7DPZgg.PNG/2%EA%B0%95_%EC%A0%84%EA%B2%BD.png?type=w966" 
+            src="https://postfiles.pstatic.net/MjAyNjA0MjVfOTYg/MDAxNzc3MTI4MzE4ODQ1._th6lzaqs5lkgFZgxFi5JtGXDow5kgW7b6poILv20OEg.6FYy3fR5oRTEf1dcadrJeG7ncWSdvTS0dUMyrJWCxwgg.PNG/2%EA%B0%95_%EC%A0%84%EA%B2%BD.png?type=w966" 
             alt="Sanctuary Interior"
-            className="w-full h-full object-cover grayscale-[10%] opacity-80"
+            className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
@@ -126,11 +126,11 @@ export default function Home() {
             className="glass-effect p-12 md:p-24 shadow-2xl relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col md:flex-row-reverse gap-16 items-center">
-              <div className="w-64 h-80 flex-shrink-0 bg-surface-container overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-1000">
+              <div className="w-64 h-80 flex-shrink-0 bg-surface-container overflow-hidden shadow-inner hover:scale-105 transition-all duration-1000">
                 <img 
                   src="https://postfiles.pstatic.net/MjAyNjA0MjRfMjIy/MDAxNzc2OTkzNzMzOTkw.X6HBsYu9Opkoo4MBAdfjW0gOqAA5qj_3Zt4CUYQWN40g.7ZpKhLKnK0lFu9ju6kk7WTxkMi7AsKoc_OczHp2T2ssg.PNG/Gemini_Generated_Image_is495qis495qis49.png?type=w966" 
                   alt="최루미 대표원장"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale-0"
                   referrerPolicy="no-referrer"
                 />
               </div>
