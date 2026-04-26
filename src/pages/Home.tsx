@@ -128,7 +128,7 @@ export default function Home() {
             <div className="relative z-10 flex flex-col md:flex-row-reverse gap-16 items-center">
               <div className="w-64 h-80 flex-shrink-0 bg-surface-container overflow-hidden shadow-inner hover:scale-105 transition-all duration-1000">
                 <img 
-                  src="https://postfiles.pstatic.net/MjAyNjA0MjRfMjIy/MDAxNzc2OTkzNzMzOTkw.X6HBsYu9Opkoo4MBAdfjW0gOqAA5qj_3Zt4CUYQWN40g.7ZpKhLKnK0lFu9ju6kk7WTxkMi7AsKoc_OczHp2T2ssg.PNG/Gemini_Generated_Image_is495qis495qis49.png?type=w966" 
+                  src="https://postfiles.pstatic.net/MjAyNjA0MjVfNyAg/MDAxNzc3MTI4MzI5NzM3.zn641cj59tqpRcXLC1UDVnJv6xCp4b-1DeU2LZwenwgg.vbhTG7E9te9wnk69pRnLRNvq4sENJq_QFwtYOcTcN4Eg.PNG/%EC%9B%90%EC%9E%A5%EC%9D%B4%EB%AF%B8%EC%A7%80.png?type=w966" 
                   alt="최루미 대표원장"
                   className="w-full h-full object-cover grayscale-0"
                   referrerPolicy="no-referrer"
