@@ -164,7 +164,7 @@ export default function Pricing() {
                   <div className="w-14 h-14 border border-[#BE9B7B]/20 rounded-full flex items-center justify-center mx-auto mb-6 bg-white shadow-sm">
                     <Star className="w-6 h-6 text-[#BE9B7B] stroke-[1.5px]" />
                   </div>
-                  <h4 className="text-lg font-serif text-[#2C2C2C] mb-2 leading-snug">눈부신 신부<br /><span className="text-xs text-[#8E8E8E] opacity-60">(4회 세션)</span></h4>
+                  <h4 className="text-lg font-serif text-[#2C2C2C] mb-2 leading-snug">눈부신 신부<br /><span className="text-xs text-[#8E8E8E] opacity-60">(4회)</span></h4>
                   <div className="h-px w-24 bg-[#E5E5E5]/60 mx-auto my-5"></div>
                   <span className="text-2xl font-serif font-bold text-[#2C2C2C]">₩1,100,000</span>
                 </div>

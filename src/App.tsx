@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { Navbar, Footer } from '@/src/components/Layout';
 import Home from '@/src/pages/Home';
+import About from '@/src/pages/About';
 import Pricing from '@/src/pages/Pricing';
 import BeforeAfter from '@/src/pages/BeforeAfter';
 import Reviews from '@/src/pages/Reviews';
@@ -51,7 +52,7 @@ export default function App() {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/program" element={<Pricing />} />
               <Route path="/before-after" element={<BeforeAfter />} />
               <Route path="/review" element={<Reviews />} />
