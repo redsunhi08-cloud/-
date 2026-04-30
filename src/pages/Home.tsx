@@ -54,19 +54,27 @@ export default function Home() {
               우리의 철학은 단순한 미용을 넘어섭니다. Lumière Skin은 최첨단 메디컬 테크놀로지와 숙련된 전문가의 손길을 결합하여, 피부 본연의 건강함을 되찾는 것에 집중합니다. 모든 프로그램은 철저한 임상 데이터를 바탕으로 설계되었습니다.
             </p>
             <div className="grid grid-cols-2 gap-12 pt-6">
-              <div className="space-y-3">
-                <span className="text-4xl font-serif text-primary">15+</span>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="space-y-3 cursor-default group"
+              >
+                <span className="text-4xl font-serif text-primary block transition-transform duration-500 group-hover:scale-110 origin-left">15+</span>
                 <p className="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">전문가의 숙련도</p>
-              </div>
-              <div className="space-y-3">
-                <span className="text-4xl font-serif text-primary">20k+</span>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="space-y-3 cursor-default group"
+              >
+                <span className="text-4xl font-serif text-primary block transition-transform duration-500 group-hover:scale-110 origin-left">20k+</span>
                 <p className="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">만족한 고객 수</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
           <motion.div 
              initial={{ opacity: 0, scale: 0.95 }}
              whileInView={{ opacity: 1, scale: 1 }}
+             whileHover={{ scale: 1.02 }}
+             transition={{ duration: 0.8 }}
              viewport={{ once: true }}
              className="relative group lg:pl-12"
           >
@@ -198,16 +206,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-serif mb-20 text-center">Lumière의 세심한 서비스 여정</h2>
           <div className="flex flex-col md:flex-row gap-0">
+            {/* Experience Journey cards with interaction effects */}
             {[
               { id: '01', title: '심층 분석', desc: 'AI 피부 스캐닝과 정밀 임상 평가를 통해 당신만의 케어 지도를 작성합니다.' },
               { id: '02', title: '감각의 준비', desc: '아로마 테라피와 웰컴 터치를 통해 신체와 마음의 긴장을 완화합니다.' },
               { id: '03', title: '정밀 트리트먼트', desc: '최첨단 피부 과학 솔루션을 당신의 유니크한 상태에 맞춰 적용합니다.' }
             ].map((step, idx) => (
-              <div key={step.id} className={`flex-1 px-12 py-16 ${idx !== 2 ? 'md:border-r border-white/10' : ''} border-b md:border-b-0`}>
-                <span className="text-6xl font-serif opacity-10 block mb-6">{step.id}</span>
+              <motion.div 
+                key={step.id} 
+                whileHover={{ y: -8, backgroundColor: "rgba(255, 255, 255, 0.03)" }}
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                className={`flex-1 px-12 py-16 ${idx !== 2 ? 'md:border-r border-white/10' : ''} border-b md:border-b-0 cursor-default transition-colors duration-500`}
+              >
+                <span className="text-6xl font-serif opacity-10 block mb-6 transition-opacity duration-500 group-hover:opacity-20">{step.id}</span>
                 <h4 className="text-2xl font-serif mb-4">{step.title}</h4>
                 <p className="text-white font-medium text-sm leading-relaxed">{step.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
