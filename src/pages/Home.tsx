@@ -7,17 +7,17 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-surface">
           <motion.img 
-            src="https://postfiles.pstatic.net/MjAyNjA0MjVfOTYg/MDAxNzc3MTI4MzE4ODQ1._th6lzaqs5lkgFZgxFi5JtGXDow5kgW7b6poILv20OEg.6FYy3fR5oRTEf1dcadrJeG7ncWSdvTS0dUMyrJWCxwgg.PNG/2%EA%B0%95_%EC%A0%84%EA%B2%BD.png?type=w966" 
+            src="https://postfiles.pstatic.net/MjAyNjA0MjVfOTYg/MDAxNzc3MTI4MzE4ODQ1._th6lzaqs5lkgFZgxFi5JtGXDow5kgW7b6poILv20OEg.6FYy3fR5oRTEf1dcadrJeG7ncWSdvTS0dUMyrJWCxwgg.PNG/2%EA%B0%95_%EC%A0%84%EA%B2%BD.png?type=w3840" 
             alt="Sanctuary Interior"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ scale: [1.05, 1.15, 1.05] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
           />
-          <div className="absolute inset-0 bg-surface/60 backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/20 to-transparent"></div>
         </div>
         
         <motion.div 
@@ -34,9 +34,6 @@ export default function Home() {
           </p>
         </motion.div>
         
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-          <div className="w-[1px] h-12 bg-primary"></div>
-        </div>
       </section>
 
       {/* Clinical Excellence */}
@@ -178,7 +175,7 @@ export default function Home() {
             </div>
             <div className="aspect-[4/5] overflow-hidden group">
                <img 
-                src="https://postfiles.pstatic.net/MjAyNjA0MjRfNTMg/MDAxNzc2OTc1OTEwMjk4.vaQIvh9CHkMJMJurWa369KXfw9YWBddXz7CEBKMquW0g.H11UGUGyaCK1Bfr_M-P0YI-tFSy-dhTMoGdl2aNDdxIg.PNG/Untitled-20260424-045406-3297-2x.png?type=w966" 
+                src="https://postfiles.pstatic.net/MjAyNjA0MzBfMTcg/MDAxNzc3NTUzMDQ0NzUy.rlyF-oqZ4sDXJUaBVD9k8P2Ijhk8fL9GYPeuK23CMvIg.X7jFspLWqajL4tiRTX5VYuw4d7GCm-RA477Q5RaLV8cg.PNG/ChatGPT_Image_2026%EB%85%84_4%EC%9B%94_30%EC%9D%BC_%EC%98%A4%ED%9B%84_09_30_15.png?type=w3840" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 alt="공간 갤러리 2"
                 referrerPolicy="no-referrer"

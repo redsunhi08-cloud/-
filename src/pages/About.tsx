@@ -101,7 +101,7 @@ export default function About() {
               className="aspect-[4/5] overflow-hidden group shadow-sm"
             >
                <img 
-                src="https://postfiles.pstatic.net/MjAyNjA0MjRfNTMg/MDAxNzc2OTc1OTEwMjk4.vaQIvh9CHkMJMJurWa369KXfw9YWBddXz7CEBKMquW0g.H11UGUGyaCK1Bfr_M-P0YI-tFSy-dhTMoGdl2aNDdxIg.PNG/Untitled-20260424-045406-3297-2x.png?type=w966" 
+                src="https://postfiles.pstatic.net/MjAyNjA0MzBfMTcg/MDAxNzc3NTUzMDQ0NzUy.rlyF-oqZ4sDXJUaBVD9k8P2Ijhk8fL9GYPeuK23CMvIg.X7jFspLWqajL4tiRTX5VYuw4d7GCm-RA477Q5RaLV8cg.PNG/ChatGPT_Image_2026%EB%85%84_4%EC%9B%94_30%EC%9D%BC_%EC%98%A4%ED%9B%84_09_30_15.png?type=w3840" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 alt="공간 갤러리 2"
                 referrerPolicy="no-referrer"

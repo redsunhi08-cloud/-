@@ -269,7 +269,7 @@ export default function Pricing() {
           {/* Right Image */}
           <div className="hidden lg:block relative group overflow-hidden">
             <img 
-              src="https://postfiles.pstatic.net/MjAyNjA0MjZfMTMg/MDAxNzc3MTMxMTMzNjg3._vfGqjAVM8FPNiFXt2ps9DdegEKIuz8H4-1Uir-nT4Qg.07ZqHn11ToUyOPCeJ8TpIJkwXr-ohtvcwT8WNT-nbUkg.JPEG/%EC%9B%A8%EB%94%A9.JPG?type=w966" 
+              src="https://postfiles.pstatic.net/MjAyNjA0MzBfMjAx/MDAxNzc3NTUzMDg2MjEy.4s-fKJAmJfGBP6IMhRqIjpMUNMFmc1oM_gQ8q9NXo48g.XqkHyqMWrdygO7eercMbMBABQEC9FC6XafEy1431I24g.PNG/%EC%9B%A8%EB%94%A92.png?type=w3840" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 brightness-[1.15] contrast-[1.02] saturate-[1.1]"
               alt="Wedding Special Care"
               referrerPolicy="no-referrer"
@@ -279,7 +279,7 @@ export default function Pricing() {
             
 
             
-            <div className="absolute bottom-0 inset-x-0 p-12 pb-16 flex justify-around bg-gradient-to-t from-black/30 to-transparent">
+            <div className="absolute bottom-0 inset-x-0 p-12 pb-16 flex justify-around bg-gradient-to-t from-black/70 via-black/30 to-transparent">
                 <div className="text-center space-y-3">
                   <div className="w-12 h-12 border border-white/30 rounded-full flex items-center justify-center mx-auto bg-white/10 backdrop-blur-sm">
                     <Star className="w-6 h-6 text-white" strokeWidth={1.5} />

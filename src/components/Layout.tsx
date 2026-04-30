@@ -38,12 +38,12 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-12">
+        <div className="hidden lg:flex items-center space-x-12 text-[18px] leading-[28px]">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`text-[12px] font-bold tracking-[0.2em] transition-all duration-300 hover:text-primary uppercase ${location.pathname === link.path ? 'text-primary border-b border-primary pb-1' : 'text-on-surface/50'}`}
+              className={`font-bold tracking-[0.2em] transition-all duration-300 hover:text-primary uppercase ${location.pathname === link.path ? 'text-primary border-b border-primary pb-1' : 'text-on-surface/50'}`}
             >
               {link.name}
             </Link>
